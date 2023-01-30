@@ -1,0 +1,26 @@
+.scrollup
+    position: fixed
+    right: 2rem
+    background-color: rgba(0, 0, 0, 0.8)
+    opacity: 0.8
+    padding: 0.6rem
+    border-radius: 0.4rem
+    z-index: 99
+    transition: .3s
+    width: 50px
+    height: 50px
+    @include flex(row, center, center)
+    &:hover
+        background-color: rgba(0, 0, 0, 1)
+    @include responsive_lg
+        right: 1.5rem
+        padding: 0.5rem
+
+    .scrollup-icon
+        color: white
+
+.show-scroll
+    bottom: 2rem
+    @include responsive_md
+        bottom: 3rem
+

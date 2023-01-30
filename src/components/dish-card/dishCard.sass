@@ -1,0 +1,59 @@
+.dish-card-container
+    @include flex(row, center, center)
+    gap: .8rem
+    box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.2)
+    padding: .4rem 1rem
+    border-radius: 3px
+    width: 19rem
+    @include responsive_xs
+        width: 20rem
+    @include responsive_sm
+        width: 30rem
+    @include responsive_md
+        width: 40rem
+    @include responsive_lg
+        gap: 1rem
+        width: 50rem
+
+    .add-btn
+        background: none
+        width: 32px
+        transition: .3s
+        margin-top: auto
+        &:hover
+            transform: scale(1.1)
+        @include responsive_md
+            width: 40px
+
+    .dish-card
+        width: 100%
+
+        .entry
+            display: grid
+            grid-template-columns: auto max-content
+            grid-template-areas: "chapter page"
+            align-items: end
+            gap: 0 .25rem
+            font-size: .9rem
+            @include responsive_sm
+                font-size: 1rem
+            @include responsive_lg
+                font-size: 1.1rem
+
+            .dish-title
+                grid-area: chapter
+                position: relative
+                overflow: hidden
+            
+                &::after
+                    position: absolute
+                    padding-left: .25ch
+                    content: repeatChar(" .", 80)
+                    text-align: right
+
+            .dish-price
+                grid-area: page
+                &::after
+                    content: '₼'
+                    padding-left: 0.15em
+        
