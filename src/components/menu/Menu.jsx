@@ -20,7 +20,7 @@ const Menu = () => {
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      }, 100);
+      }, 200);
     }
   }, [pathname, hash, key]);
 
