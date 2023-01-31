@@ -19,7 +19,10 @@ const Home = () => {
             <img src={BannerImg} alt='hero' />
             <div className="hero-info">
                 <h2>Önəmli olan yeməyin dadı deyil,<br />onu kiminlə paylaşdığınızdır.</h2>
-                <Link to={`/menu`}><button className="hero-btn">Menyu</button></Link>
+                <div className="btns-container">
+                    <Link to={`/menu`}><button className="hero-btn">Menyu</button></Link>
+                    <Link to={`/reservation`}><button className="hero-btn">Rezervasiya</button></Link>
+                </div>
             </div>
         </div>
         <div className="categories-slider-container">
