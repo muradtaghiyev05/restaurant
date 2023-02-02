@@ -22,6 +22,7 @@ export const categories = [
     {
         id: 2,
         title: "QƏLYANALTILAR",
+        subTypes: [ "SOYUQ QƏLYANALTILAR", "İSTİ QƏLYANALTILAR" ],
         img: lunch
     },
     {
@@ -72,16 +73,19 @@ export const categories = [
     {
         id: 12,
         title: "İSTİ İÇKİLƏR",
+        subTypes: [ "ÇAY", "QƏHVƏ" ],
         img: hotDrink
     },
     {
         id: 13,
         title: "ALKOQOLSUZ İÇKİLƏR",
+        subTypes: [ "TƏBİİ ŞİRƏLƏR", "LİMONAD", "SƏRİN İÇKİLƏR" ],
         img: cola
     },
     {
         id: 14,
         title: "ALKOQOLLU İÇKİLƏR",
+        subTypes: ["ŞAMPAN", "ŞƏRAB", "VİSKİ", "ARAQ", "PİVƏ", "KOKTEYLLƏR" ],
         img: drinks
     },
 ];

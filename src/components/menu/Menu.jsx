@@ -49,9 +49,17 @@ const Menu = () => {
               <h2>{item.title}</h2>
             </div>
             <div className='dish-container'>
-              {dishes.filter(dish => dish.type === item.title).map(dish => (
-                <DishCard key={dish.id} item={dish} />
-              ))}
+              {item.subTypes ? item.subTypes.map(type => (
+                <div className="subtype-container" key={type}>
+                  <span className="subtype-title">{type}</span>
+                  {dishes.filter(dish => dish.type === item.title && dish.subType === type).map(dish => (
+                    <DishCard key={dish.id} item={dish} />
+                  ))}
+                </div>
+              )) : 
+                dishes.filter(dish => dish.type === item.title).map(dish => (
+                  <DishCard key={dish.id} item={dish} />
+                ))}
             </div>
           </div>
         ))}
