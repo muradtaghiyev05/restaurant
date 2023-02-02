@@ -29,8 +29,8 @@ function App() {
             <Route path='*' element={<ErrorPage />} />
           </Route>
         </Routes>
+        <ScrollUp />
       </Suspense>
-      <ScrollUp />
     </>
   )
 }
